@@ -1,0 +1,25 @@
+{
+  "name": "pai-gon",
+  "version": "1.0.0",
+  "description": "🧼🧼🧼 外接する多角形と内接する多角形の長さから、円周率(π)を求めるプログラムです！",
+  "main": "./src/index.ts",
+  "repository": "https://github.com/osawa-koki/pai-gon.git",
+  "author": "osawa-koki <koki@osawa.dev>",
+  "license": "Apache-2.0",
+  "private": false,
+  "engines": {
+    "node": ">= 20.0.0",
+    "yarn": ">= 1.22.0"
+  },
+  "scripts": {
+    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node20 --outfile=./public/index.js",
+    "dev": "node ./dev.js",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.11",
+    "http-server": "^14.1.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {}
+}
