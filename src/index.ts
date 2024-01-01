@@ -21,15 +21,12 @@ baseCircle.style.stroke = 'black'
 baseCircle.style.strokeWidth = '0.3'
 svgElement.appendChild(baseCircle)
 
-const d = calcD(count)
 const dOut = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-dOut.setAttribute('d', `M ${d.points.out} Z`)
 dOut.style.fill = 'none'
 dOut.style.strokeWidth = '0.3'
 svgElement.appendChild(dOut)
 
 const dIn = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-dIn.setAttribute('d', `M ${d.points.in} Z`)
 dIn.style.fill = 'none'
 dIn.style.strokeWidth = '0.3'
 svgElement.appendChild(dIn)
@@ -39,6 +36,7 @@ function update (): void {
   dOut.setAttribute('d', `M ${d.points.out} Z`)
   dIn.setAttribute('d', `M ${d.points.in} Z`)
 }
+update()
 
 minusButtonElement.addEventListener('click', () => {
   count--
