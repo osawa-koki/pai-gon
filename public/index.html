@@ -5,12 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
   <title>🧼 Pai gon 🧼</title>
+  <style>
+    svg path {
+      fill: none;
+      stroke-width: 0.2;
+      transform-origin: center;
+    }
+    svg path:nth-of-type(1) {
+      stroke: blue;
+      animation: rotate linear 5s infinite normal none running;
+    }
+    svg path:nth-of-type(2) {
+      stroke: red;
+      animation: rotate linear 5s infinite reverse none running;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
   <h1 class="text-center mt-3">🧼 Pai gon 🧼</h1>
   <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="border d-block mx-auto mt-3" style="width: 300px; aspect-ratio: 1/1;"></svg>
-  <button class="btn btn-primary d-block mx-auto mt-3">+1角</button>
-  <table id="v1-table" class="table">
+  <div class="d-flex">
+    <button id="minus-button" class="btn btn-primary d-block mx-auto mt-3">-1角</button>
+    <button id="plus-button" class="btn btn-primary d-block mx-auto mt-3">+1角</button>
+  </div>
+  <table id="v1-table" class="table mt-3">
     <thead>
       <tr>
         <td class="text-center">内接する多角形</td>
@@ -20,9 +46,9 @@
     </thead>
     <tbody>
       <tr>
-        <td class="in-polygon"></td>
+        <td id="in-polygon"></td>
         <td class="text-center">正？角形</td>
-        <td class="out-polygon"></td>
+        <td id="out-polygon"></td>
       </tr>
       <tr>
         <td id="in-length"></td>
