@@ -24,7 +24,9 @@ esbuild.context({
     ctx.watch()
     process.on('SIGINT', () => {
       ctx.cancel()
-      console.log('Bye 👋👋👋')
-      process.exit(0)
+        .then(() => {
+          console.log('Bye 👋👋👋')
+          process.exit(0)
+        })
     })
   })
