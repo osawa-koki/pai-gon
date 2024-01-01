@@ -1,5 +1,5 @@
 import calcD from './calcD'
-import { svgElement, minusButtonElement, plusButtonElement } from './elements'
+import { svgElement, minusButtonElement, plusButtonElement, inPolygonElement, outPolygonElement, inLengthElement, outLengthElement, paiMinElement, paiMaxElement } from './elements'
 
 let count = 4
 
@@ -35,6 +35,22 @@ function update (): void {
   const d = calcD(count)
   dOut.setAttribute('d', `M ${d.points.out} Z`)
   dIn.setAttribute('d', `M ${d.points.in} Z`)
+
+  //   e.textContent = count;
+  // });
+  // ind.textContent = (Math.round(rt["length"]["in"] * 10000) / 10000).toFixed(4);
+  // outd.textContent =  (Math.round(rt["length"]["out"] * 10000) / 10000).toFixed(4);
+  // min.textContent = rt["length"]["in"] / 2 / 25;
+  // max.textContent = rt["length"]["out"] / 2 / 25;
+
+  inPolygonElement.textContent = count.toString()
+  outPolygonElement.textContent = count.toString()
+
+  inLengthElement.textContent = (Math.round(d.length.in * 10000) / 10000).toFixed(4)
+  outLengthElement.textContent = (Math.round(d.length.out * 10000) / 10000).toFixed(4)
+
+  paiMinElement.textContent = (d.length.in / 2 / 25).toString()
+  paiMaxElement.textContent = (d.length.out / 2 / 25).toString()
 }
 update()
 

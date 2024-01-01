@@ -33,12 +33,12 @@
   <h1 class="text-center mt-3">🧼 Pai gon 🧼</h1>
   <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="border d-block mx-auto mt-3" style="width: 300px; aspect-ratio: 1/1;"></svg>
   <div class="d-flex">
-    <button id="minus-button" class="btn btn-primary d-block mx-auto mt-3">-1角</button>
+    <button id="minus-button" class="btn btn-outline-primary d-block mx-auto mt-3">-1角</button>
     <button id="plus-button" class="btn btn-primary d-block mx-auto mt-3">+1角</button>
   </div>
   <table id="v1-table" class="table mt-3">
     <thead>
-      <tr>
+      <tr class="table-light">
         <td class="text-center">内接する多角形</td>
         <td></td>
         <td class="text-center">外接する多角形</td>
@@ -46,19 +46,19 @@
     </thead>
     <tbody>
       <tr>
-        <td id="in-polygon"></td>
+        <td id="in-polygon" class="text-end"></td>
         <td class="text-center">正？角形</td>
-        <td id="out-polygon"></td>
+        <td id="out-polygon" class="text-start"></td>
       </tr>
       <tr>
-        <td id="in-length"></td>
+        <td id="in-length" class="text-end"></td>
         <td class="text-center">周の長さ</td>
-        <td id="out-length"></td>
+        <td id="out-length" class="text-start"></td>
       </tr>
       <tr>
-        <td id="pai-min"></td>
+        <td id="pai-min" class="text-end"></td>
         <td class="text-center">&lt; π &lt;</td>
-        <td id="pai-max"></td>
+        <td id="pai-max" class="text-start"></td>
       </tr>
     </tbody>
   </table>
