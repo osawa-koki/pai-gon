@@ -12,7 +12,8 @@
     "yarn": ">= 1.22.0"
   },
   "scripts": {
-    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node20 --outfile=./public/index.js"
+    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node20 --outfile=./public/index.js",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "esbuild": "^0.19.11",
